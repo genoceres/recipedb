@@ -127,6 +127,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // oceres_recipe_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'oceres_recipe_homepage');
+            }
+
+            return array (  '_controller' => 'Oceres\\RecipeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'oceres_recipe_homepage',);
+        }
+
+        // oceres_recipe_hellopage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oceres_recipe_hellopage')), array (  '_controller' => 'Oceres\\RecipeBundle\\Controller\\DefaultController::helloAction',));
+        }
+
         // homepage
         if ($pathinfo === '/app/example') {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
