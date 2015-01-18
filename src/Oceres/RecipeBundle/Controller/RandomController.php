@@ -8,8 +8,14 @@ class RandomController extends Controller
 {
     public function indexAction($limit)
     {
-    	$number = mt_rand(1,$limit);
-    	return $this->render('OceresRecipeBundle:Random:index.html.twig', array('number' => $number));
+    	$position = mt_rand(0,1) == 1 ? 'up' : 'down';
+    	if($position == 'up'){
+    		$number = mt_rand(11,$limit);
+    	}else{
+    		$number = mt_rand(22,$limit);
+    	}
+    	
+    	return $this->render('OceresRecipeBundle:Random:index.html.twig', array('number' => $number, 'position' => $position));
     }
 
 }

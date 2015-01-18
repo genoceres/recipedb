@@ -1,6 +1,6 @@
 oceres_recipe_homepage:
     path:     /
-    defaults: { _controller: OceresRecipeBundle:Default:index }
+    defaults: { _controller: OceresRecipeBundle:Frontend:index }
 oceres_recipe_hellopage:
     path:     /hello/{name}
     defaults: { _controller: OceresRecipeBundle:Default:hello }
