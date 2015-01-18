@@ -5,5 +5,5 @@ oceres_recipe_hellopage:
     path:     /hello/{name}
     defaults: { _controller: OceresRecipeBundle:Default:hello }
 random:
-	path: /random/{limit}
-	defaults: {_controller: OceresRecipeBundle:Random:index }
+    path: /random/{limit}
+    defaults: {_controller: OceresRecipeBundle:Random:index }
