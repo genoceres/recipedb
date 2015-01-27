@@ -24,11 +24,13 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    
 
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    charset: utf8
 
 # Assetic Configuration
 assetic:

@@ -1,0 +1,47 @@
+{% extends 'OceresRecipeBundle:Frontend:default.html.twig' %}
+
+{% block maincontent %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-9 col-sm-9">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<h2>{{ recipe.title }} <span class="serves">(Serves {{ recipe.serves }})</h2>
+						<h4>{{ recipe.chef }} <span class="date">({{ recipe.indt }})</span></h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-9">
+						<h2>Ingredients</h2>
+						<ul>
+						{% for ingredient in recipe.ingredients %}
+						<li>{{ ingredient }}</li>
+						{% endfor %}
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-9">
+					
+					{% if recipe.image != '' %}
+					<img src="{{ recipe.image }}" />
+					{% endif %}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<h2>Method</h2>
+						<ol>
+						{% for step in recipe.method %}
+						<li>{{ step }}</li>
+						{% endfor %}
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3 col-sm-3">
+			This is where the RH block will go
+		</div>
+	</div>
+</div>
+{% endblock %}

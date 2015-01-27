@@ -9,3 +9,11 @@ body { padding-top: 70px; }
   position: absolute;
   width: 100%;
 }
+
+h4 span.date {
+	font-size:12px;
+}
+
+h2 span.serves {
+	font-size:16px;
+}
