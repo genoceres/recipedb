@@ -113,4 +113,9 @@ class Recipe {
 		return property_exists($this,$param);
 	}
 	
+	public function setAccessed(){
+		// WILL be saved in the database
+		$this->lastaccessed = new \DateTime("now");
+	}
+	
 }

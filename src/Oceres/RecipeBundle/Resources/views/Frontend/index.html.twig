@@ -10,6 +10,14 @@
 		</form>
 		</div>
 	</div>
+	<div class="row" id="recent-recipes">
+		<div class="col-xs-12 col-sm-12">
+		<h3>Recently viewed recipes</h3>
+		{% for recipe in recentRecipes %}
+		<a href="/recipe/{{ recipe.id }}/{{recipe.title }}">{{ recipe.title }}</a><br/>
+		{% endfor %} 
+		</div>
+	</div>
 </div>
 {% endblock %}
 

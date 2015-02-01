@@ -10,8 +10,12 @@ class RecipeController extends Controller
     public function recipeAction($name,$recipeid)
     {
     
-    	$recipe = $this->getDoctrine()->getRepository('OceresRecipeBundle:Recipe')->find($recipeid);
+    	$em = $this->getDoctrine()->getManager();
     	
+    	$recipe = $em->getRepository('OceresRecipeBundle:Recipe')->find($recipeid);
+    	
+    	$recipe->setAccessed();
+    	$em->flush();
 
     	$params = array('recipe' => $recipe);
         return $this->render('OceresRecipeBundle:Frontend:recipe.html.twig',$params);
