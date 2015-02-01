@@ -17,8 +17,4 @@ class RecipeController extends Controller
         return $this->render('OceresRecipeBundle:Frontend:recipe.html.twig',$params);
     }
 
-    public function helloAction($name)
-    {
-        return $this->render('OceresRecipeBundle:Default:hello.html.twig', array('name' => $name));
-    }
 }

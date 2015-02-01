@@ -4,9 +4,9 @@ oceres_recipe_homepage:
 oceres_recipe_recipepage:
     path:     /recipe/{recipeid}/{name}
     defaults: { _controller: OceresRecipeBundle:Recipe:recipe }
-oceres_recipe_hellopage:
-    path:     /hello/{name}
-    defaults: { _controller: OceresRecipeBundle:Default:hello }
+oceres_recipe_searchpage:
+    path:     /search/
+    defaults: { _controller: OceresRecipeBundle:Search:search }
 random:
     path: /random/{limit}
     defaults: {_controller: OceresRecipeBundle:Random:index }

@@ -4,9 +4,10 @@ body { padding-top: 70px; }
 
 .footer {
   background-color: #f5f5f5;
-  bottom: 0;
+  margin-top:10px;
+  bottom: 0px;
   height: 60px;
-  position: absolute;
+/*  position: absolute; */
   width: 100%;
 }
 
@@ -16,4 +17,24 @@ h4 span.date {
 
 h2 span.serves {
 	font-size:16px;
+}
+
+
+
+
+/* search results */
+#searchresults .result {
+	border-bottom: 1px solid #CCC;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+}
+
+#searchresults .result .title {
+	font-size:20px;
+	font-weight: bold;
+}
+
+#searchresults .result .date {
+	font-size:10px;
 }

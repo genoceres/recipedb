@@ -38,6 +38,16 @@ class Recipe {
 	protected $serves;
 	
 	/**
+	 * @ORM\Column(type="string", length=50, name="rp_preptime")
+	 */
+	protected $preptime;
+	
+	/**
+	 * @ORM\Column(type="string", length=50, name="rp_cooktime")
+	 */
+	protected $cooktime;
+	
+	/**
 	 * @ORM\Column(type="string", length=4000, name="rp_ingredients")
 	 */
 	protected $ingredients;
